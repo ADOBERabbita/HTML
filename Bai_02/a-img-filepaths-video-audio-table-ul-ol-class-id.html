@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Thẻ <a> -->
+    <p>Xem tài kiệu: <a> Tại đây </a></p> <!-- Thẻ <a></a> (anchor-mỏ neo) là thẻ để khi click vào thẻ đó sẽ chuyển hướng đến trang khác. -->
+    
+    <p>Xem tài kiệu: <a href="https://www.google.com">Tại đây</a></p> <!-- (Hypertext Reference-tài liệu tham khảo dạng siêu văn bản) thuộc tính xác định địa chỉ liên kết. -->
+    
+    <!-- target: Thuộc tính xác định nơi mà tài liệu được mở -->
+    <p>Xem tài kiệu: <a href="https://www.google.com" target="_self">Tại đây</a></p> <!-- _self: Mặc định. Mở tài liệu ở tab hiện tại -->
+    <p>Xem tài kiệu: <a href="https://www.google.com" target="_blank">Tại đây</a></p> <!-- _blank: Mở tài liệu trong 1 tab mới -->
+    <p>Xem tài kiệu: <a href="https://www.google.com" target="_blank" title="Đây là link sang trang google">Tại đây</a></p> <!-- title: Thông tin bổ sung về một element -->
+    <hr>
+    
+    <!-- Thẻ img -->
+    <!-- Thẻ <img> là thẻ để nhúng ảnh vào trang web, thẻ img là thẻ trống, chỉ chứa các thuộc tính và không có thẻ đóng -->
+    <img>
+    <img src="https://vcdn1-dulich.vnecdn.net/2021/07/16/1-1626437591.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=i2M2IgCcw574LT-bXFY92g"> <!-- src(source-nguồn) chèn đường dẫn ảnh -->
+    <img src="https://vcdn1-dulich.vnecdn.net/2021/07/16/1-1626437591.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=i2M2IgCcw574LT-bXFY92g" alt="Đây là ảnh về bầu trời"> <!-- alt(alternate-thay thế) văn bản thay thế cho hình ảnh, hiển thị khi đường dẫn ảnh bị lỗi -->
+
+    <!-- File Paths -->
+    <!-- Absolute File Paths (Đường dẫn tuyệt đối): Đường dẫn tệp tuyệt đối là URL đầy đủ của tệp -->
+    
+    <img src="ảnh 2.jpg" alt=""> <!-- File "ảnh 2.jpg" nằm cùng thư mục với trang hiện tại -->
+
+    <img src="images/ảnh 1.jpg" alt=""> <!-- File "ảnh 1.jpg" nằm trong thư mục images trong thư mục hiện tại -->
+
+    <img src="/Bài_02/images/ảnh 1.jpg" alt=""> <!-- File "ảnh 1.jpg" nằm trong thư mục images ở thư mục gốc của trang web hiện tại -->
+
+    <img src="../ảnh 3.jpg" alt=""> <!-- File "ảnh 3.jpg" nằm trong thứ mục tăng 1 cấp so với thư mục hiện tại. Tăng 1 cấp: ../ ; 2 cấp: ../../ ;... -->
+    <br>
+    <hr>
+
+    <!-- Kết hợp thẻ <a> và thẻ <img> -->
+    <a href="https://www.google.com" target="_blank" title="Đây là link sang trang google">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+    </a>
+    <br>
+    <a href="https://www.facebook.com" target="_blank" title="Đây là link sang trang facebook">
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg">
+    </a>
+    <br>
+    <a href="https://www.youtube.com/" target="_blank" title="Đây là link sang trang youtube">
+        <img src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500">
+    </a>
+    <br>
+    <hr>
+
+    <!-- Thẻ <video> -->
+    <video width="216" height="384" controls loop> <!-- width/height: chiều dài/rộng ; controls: thuộc tính điều khiển ; loop: lặp lại video ; autoplay: tự động phát video ; muted: tắt tiếng -->
+        <source src="Pot1(5).mp4" type="video/mp4" > <!-- type: kiểu video(mp4,ogg,webm) -->
+    </video>
+    <br>
+    <hr>
+
+    <!-- Thẻ <audio> -->
+    <audio controls>
+        <source src="Hip-Hop Logo V1.wav" type="audio/wav">
+    </audio>
+    <br>
+    <hr>
+
+     <style>
+        table,
+        th,
+        td {
+            border: 1px solid black ;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style> 
+    
+    <!-- Thẻ <table> -->
+    <table> <!-- Xác định một bảng -->
+        <thead> <!-- Phần đầu của bảng -->
+            <tr>
+                <th>STT</th> <!-- (table header) xác định tiêu đề của bảng -->
+                <th>Họ và tên</th>
+                <th>Số điện thoại</th>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody> <!-- Phần thân của bảng -->
+            <tr> <!-- (table row) xác định 1 hàng của bảng-->
+                <td>1</td> <!-- (table data) xác định dữ liệu của ô bảng-->
+                <td>Nguyễn Văn A</td>
+                <td>0123456789</td>
+                <td>nguyenvana@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyễn Thị B</td>
+                <td>1234567890</td>
+                <td>nguyenthib@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyễn Bá C</td>
+                <td>1357924680</td>
+                <td>nguyenbac@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Level 1</th>
+                <th>Level 2</th>
+                <th>Level 3</th>
+                <th>Info</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="6">System</td>
+                <td rowspan="4">System Apps</td>
+                <td rowspan="3">SystemEnv</td>
+                <td>App Test</td>
+                <td>foo</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 2 cột 1</td> -->
+                <!-- <td>Hàng 2 cột 2</td> -->
+                <!-- <td>Hàng 2 cột 3</td> -->
+                <td>App Memory</td>
+                <td>foo</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 3 cột 1</td> -->
+                <!-- <td>Hàng 3 cột 2</td> -->
+                <!-- <td>Hàng 3 cột 3</td> -->
+                <td>App Test</td>
+                <td>bar</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 4 cột 1</td> -->
+                <!-- <td>Hàng 4 cột 2</td> -->
+                <td>SystemEnv2</td>
+                <td>App Test</td>
+                <td>bar</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 5 cột 1</td> -->
+                <td rowspan="2">System Memory</td>
+                <td rowspan="2">Memory Test</td>
+                <td>Memory Fune</td>
+                <td>foo</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 6 cột 1</td> -->
+                <!-- <td>Hàng 6 cột 2</td> -->
+                <!-- <td>Hàng 6 cột 3</td> -->
+                <td>Apes Test</td>
+                <td>foo</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="11"> <b>TCB</b> </td>
+                <td> <b>Order no:</b> </td>
+                <td rolspan="3">#ABC001</td>
+                <!-- <td>Hàng 1 cột 4</td>
+                <td>Hàng 1 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 2 cột 1</td> -->
+                <td> <b>Order Date:</b> </td>
+                <td rospan="3">23-Mar-2016</td>
+                <!-- <td>Hàng 2 cột 4</td>
+                <td>Hàng 2 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 3 cột 1</td> -->
+                <td style="text-align: center;" colspan="4"> <b>Customer</b> </td>
+                <!-- <td>Hàng 3 cột 3</td>
+                <td>Hàng 3 cột 4</td>
+                <td>Hàng 3 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 4 cột 1</td> -->
+                <td> <b>Name:</b> </td>
+                <td colspan="3">John Papas</td>
+                <!-- <td>Hàng 4 cột 4</td>
+                <td>Hàng 4 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 5 cột 1</td> -->
+                <td> <b>Address:</b> </td>
+                <td>Independence Day 5th str, 11511</td>
+                <!-- <td>Hàng 5 cột 4</td>
+                <td>Hàng 5 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 6 cột 1</td> -->
+                <td style="text-align: center;" colspan="4"> <b>Order Details</b> </td>
+                <!-- <td>Hàng 6 cột 3</td>
+                <td>Hàng 6 cột 4</td>
+                <td>Hàng 6 cột 5</td> -->
+            </tr>
+            <tr>
+                <!-- <td>Hàng 7 cột 1</td> -->
+                <td>1</td>
+                <td>Of Mice and Men</td>
+                <td>Book</td>
+                <td>10.00$</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 8 cột 1</td> -->
+                <td>2</td>
+                <td>Les Miserables</td>
+                <td>Book</td>
+                <td>12.00$</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 9 cột 1</td> -->
+                <td>3</td>
+                <td>Game of Thrones - $01</td>
+                <td>DVD</td>
+                <td>50.00$</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 10 cột 1</td> -->
+                <td>4</td>
+                <td>Samsung Galaxy</td>
+                <td>Mobile Phone</td>
+                <td>200.00$</td>
+            </tr>
+            <tr>
+                <!-- <td>Hàng 11 cột 1</td> -->
+                <td style="text-align: right;" colspan="3"> <b>Total</b></td>
+                <!-- <td>Hàng 11 cột 3</td>
+                <td>Hàng 11 cột 4</td> -->
+                <td>272.00$</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <!-- Thẻ <ul> ; <ol> (chèn danh sách) -->
+    <!-- Kiểu <ul> -->
+    <ul> <!-- (Unordered List-Không sắp xếp) các mục con của nó sẽ không được đánh số, mà chỉ được đánh dấu bằng hình tròn -->
+        <li>Mục 1</li> <!-- (List Item) một mục trong danh sách -->
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ul>
+    <hr>
+
+    <!-- Kiểu <ol> -->
+    <ol type="1"> <!-- (Ordered List-Sắp xếp) các mục con của nó được sắp xếp theo thứ tự bằng số hoặc chữ cái -->
+        <!-- type=" ": 1: dạng số ; A: dạng chữ hoa ; a: dạng chữ thường ; I: dạng la Mã viết hoa ; i: dạng la Mã viết thường -->
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ol>
+    <hr>
+
+    <ol type="I">
+        <li>Backgroud Skills
+            <ol type="A">
+                <li>Unix Commands</li>
+                <li>Vim Text Editor</li>
+            </ol>
+        </li>
+        <li>HTML
+            <ol type="A">
+                <li>Minimal Page</li>
+                <li>Headings</li>
+                <li>Tags</li>
+                <li>List
+                    <ol type="i">
+                        <li>Unordered</li>
+                        <li>Ordered</li>
+                        <li>Definition</li>
+                        <li>Nested</li>
+                    </ol>
+                </li>
+                <li>Links
+                    <ol type="i">
+                        <li>Absolute</li>
+                        <li>Relative</li>
+                    </ol>
+                </li>
+                <li>Images</li>
+            </ol>
+        </li>
+        <li>CSS
+            <ol type="A">
+                <li>Anotomy</li>
+                <li>Basic Selections
+                    <ol type="i">
+                        <li>Element</li>
+                        <li>Class</li>
+                        <li>ID</li>
+                        <li>Group</li>
+                    </ol>
+                </li>
+                <li>The DOM</li>
+                <li>Advanced Selectors</li>
+                <li>Box Model</li>
+            </ol>
+        </li>
+        <li>Programming
+            <ol type="A">
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ol>
+        </li>
+        <li>Database
+            <ol type="A">
+                <li>Flat File</li>
+                <li>Relational</li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+
+    <!-- Phân biệt kiểu hiển thị của element: block và inline
+    Kiểu Block (khối): - Luôn bắt đầu trên 1 dòng mới, và trình duyệt sẽ tự động thêm khoảng trống trước và sau element
+                       - Luôn chiếm toàn bộ chiều rộng có sẵn
+                       - Một số thẻ dạng block: <div>,<footer>,<form>,<h1>,<header>,<hr>,<li>,<main>,<nav>,<ol>,<p>,<section>,<table>,... 
+    Kiểu Inline (nội tuyến-trong hàng):
+                       - Không bắt đầu trên một dòng mới, chiều rộng bằng với chiều rộng của element đó
+                       - Một số dạng inline: <a>,<b>,<br>,<button>,<em>,<i>,<img>,<input>,<label>,...-->
+    
+    <!-- Thẻ Class và Id -->
+    
+    <style>
+        #c {
+            color: blueviolet;
+        }
+        #COLOR-green {
+            color: green;
+        }
+        #color-blu {
+            color: blue;
+        }
+        .Color-blu {
+            color: blue;
+        }
+        .color-red {
+            color: red;
+        }
+        .font-big {
+            font-size: 50px;
+        }
+        
+    </style>
+    <h1 class="color-red">Nội dung thẻ h1</h1> <!-- 1 calss dùng đc cho nhiều element -->
+    <h2 class="color-red font-big">Nội dung thẻ 2</h2> <!-- 1 element có thể có nhiều class -->
+    <p class="Color-blu">Nội dung thẻ p</p> <!-- Tên class có phân biệt chữ hoa và chữ thường -->
+
+    <h2 id="color-blu">Nội dung thẻ h2</h2> <!-- Trong 1 trang các element ko đc phép trùng tên id -->
+    <h2 id="COLOR-green">Nội dung thẻ h2</h2> <!-- Tên id có phân biệt chữ hoa và chữ thường -->
+    <h2 id="c">Nội dung thẻ h2</h2> <!-- Tên id chứa ít nhất 1 ký tự, ko đc bắt đầu bằng số và ko đc chứa khoảng trắng -->
+    
+    <!-- Quy tắc đặt tên class và id 
+         - Các ký tự là chữ cái viết thường: a->z
+         - Các ký tự là chữ cái viết hoa: A->Z
+         - Các ký tự là chữ số: 0->9
+         - Dấu gạch dưới: _
+         - Dấu gạch nối: - 
+         * Lưu ý: Tên id và class tuyệt đối
+                 - Không chứa các ký tự đặc biệt: !,@,#,$,%,^,&,...
+                 - Không bắt đầu là một chữ số từ 0->9 -->
+    
+    <!-- Khác biệt giữa thuộc tính id và thuộc tính class
+        - Thuộc tính id: - Một phần tử chỉ nhận 1 id
+                         - Một tên id chỉ có thể dùng để dặt cho 1 phần tử duy nhất
+                         - Khi muốn chọn 1 phần tử dựa theo id thì ta dùng cú pháp "#ten-id"
+        - Thuộc tính class: - Một phần tử có thể nhận 1 hoặc nhiều class
+                            - Một tên class có thể dùng để đặt cho nhiều phần tử khác nhau
+                            - Khi muốn chọn 1 phần tử dựa theo class thì ta dùng cú pháp ".ten-class"-->
+
+
+</body>
+</html>

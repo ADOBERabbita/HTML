@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Form là 1 biểu mẫu HTML đc sử dụng để thu thập thông tin đầu vào của người dùng. Đầu vào của người dùng đc gửi đến máy chủ để xử lý -->
+    <!-- Thuộc tính của form: - action: Xác định hành động sẽ đc thực hiện khi biểu mẫu đc gửi. Gtri là 1 đường dẫn. Thông thường, dữ liệu biểu mẫu đc gửi đến tệp trên máy chủ khi người dùng nhấp vào nút gửi
+                              - target: Chỉ định nơi hiển thị phản hồi nhận được sau khi gửi biểu mẫu
+                              - method: Chỉ định giao thức HTTP sẽ đc sd khi gửi dữ liệu: - GET: - Nối dữ liệu vào URL, theo cặp name/value
+                                                                                                 - KO BAO GIỜ sd GET để gửi giữ liệu bảo mật (tk,mk)
+                                                                                                 - Độ dài giới hạn 2048 ký tự
+                                                                                          - POST: - Dữ liệu ko đc hiện thị trong URL
+                                                                                                  - Ko giới hạn về kích thước và có thể đc sd để gửi 1 lượng lớn dữ liệu 
+                              - autocomplete: Khi bật, trình duyệt sẽ tự động gợi ý các giá trị dựa trên các gtri mà người dùng đã nhập trc đó
+                              - novalidate: Đặc tả dữ liệu form ko cần phải kiểm tra tính chính xác dữ liệu khi gửi. ví dụ mail ko cần nhập đúng vẫn gửi đc -->
+        
+    <action="http://www.w3schools.com/action_page.php" target="_blank" method="post" autocomplete="on">
+        
+        <!-- Những element trong form -->
+        
+        <label for="fullname">Họ và tên</label>                                        <!-- <label>: - xác định nhãn cho 1 số element trong biểu mẫu. Để người dùng hiểu hơn về element đó
+                                                                                                     - thuộc tính for của <lebel> phải bằng thuộc tính id của phần tử <input> để liên kết chúng với nhau -->
+        <br>
+        <input id="fullname" name="ho_va_ten">                                         <!-- <input>: có thể đc hiển thị theo nhiều cách, tùy thuộc vào thuộc tính type, mặc định typr="text" -->
+        <br>
+        <label for="mssv">Mã số sinh viên</label>
+        <br>
+        <input id="mssv" name="ma_so_sinh_vien">
+        <br>
+        <label for="">Lớp</label>
+        <br>
+        <select name="lop_hoc" size="1" > multiple                                     <!-- <select>: - hiển thị danh sách thả xuống (dropdown)
+                                                                                                      - các thẻ ,option> xđ 1 tùy chọn có thể đc chọn. để thay đổi mặc định lựa chọn thì thêm thuộc tính "selected" vào ,option> muốn chọn mặc định-->
+            <option selected>Chọn lớp</option>
+            <option value="GD1501">GD1501</option>
+            <option value="GD1502">GD1502</option>
+            <option value="GD1503">GD1503</option>
+            <option value="GD1504">GD1504</option>
+        </select>
+        <br>
+        <label for="">Ghi chú</label>
+        <br>
+        <textarea name="note" rows="5"></textarea>                                     <!-- <textaera>: - Xác định trường nhập nhiều dòng, thuộc tính rows: số dòng hiển thị ; thuộc tính cols: chiều rộng hiển thị        
+                                                                                                        - thuộc tính cols="20" ko hay dùng -->
+        <br>
+        <button>Button</button>                                                        <!-- <button>: Xác định nút có thể nhấp -->
+        <br>
+        <input type="submit" value="Input">
+        <br>
+        <hr>
+
+        <!-- Các kiểu của thẻ <input> -->
+        
+        <label for="">Dùng để nhập text</label>                                        <!-- <input type="text">: Dùng để nhập text -->
+        <br>
+        <input name="text" type="text">
+        <br>
+        <label for="">Dùng để nhập email</label>
+        <br>
+        <input name="email" type="email">                                              <!-- <input type="email">: Dùng để nhập mail -->
+        <br>
+        <label for="">Dùng để nhập mật khẩu</label>
+        <br>
+        <input name="mat_khau" type="password">                                        <!-- <input type="password">: Dùng để nhập password -->
+        <br>
+        <label for="">Dùng để nhập số, ko nhập đc chữ</label>
+        <br>
+        <input name="so_luong" type="number">                                          <!-- <input type="number">: Dùng để nhập số lượng -->
+        <br>
+        <label for="">Dùng để chọn: năm,tháng,ngày</label>
+        <br>
+        <input name="ngay_thang_nam" type="date">                                      <!-- <input type="date">: Dùng để nhập ngày, tháng, năm -->
+        <br>
+        <label for="">Dùng để chọn: giờ,phút,giây</label>
+        <br>
+        <input name="gio_phut_giay" type="time">                                       <!-- <input type="time">: Dùng để nhập giờ, phút, giây -->
+        <br>
+        <label for="">Dùng để chọn: năm,tháng,ngày,giờ,phút,giây</label>
+        <br>
+        <input name="ngay_thang_nam_gio_phut_giay" type="datetime-local">              <!-- <input type="datetime-local">: Dùng để nhập ngày, tháng, năm, giờ, phút, giây -->
+        <br>
+        <label for="">Dùng để tải file lên</label>
+        <br>
+        <input name="file" type="file">                                                <!-- <input type="file">: Dùng để tải file lên -->
+        <br>
+        <label for="">Các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế</label>
+        <br>
+        <input name="language" type="checkbox" id="ngonnguC" value="c">                <!-- <input type="checkbox">: Các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế -->
+        <label for="ngonnguC">Ngôn ngữ C</label>
+        <br>
+        <input name="language" type="checkbox" id="ngonngujavascrip" value="java">
+        <label for="ngonngujavascrip">Java Scrip</label>
+        <br>
+        <input name="language" id="ngonnguphp" type="checkbox" value="php">
+        <label for="ngonnguphp">Ngôn ngữ PHP</label>
+        <br>
+        <label for="">Các nút radio cho phép người dùng chỉ chọn một trong số các lựa chọn</label>
+        <br>
+        <input name="language" type="radio" id="ngonnguC" value="c">                   <!-- <input type="radio">: Các nút radio cho phép người dùng chỉ chọn một trong số các lựa chọn -->
+        <label for="ngonnguC">Ngôn ngữ C</label>
+        <br>
+        <input name="language" type="radio" id="ngonngujavascrip" value="java">
+        <label for="ngonngujavascrip">Java Scrip</label>
+        <br>
+        <input name="language" id="ngonnguphp" type="radio" value="php">
+        <label for="ngonnguphp">Ngôn ngữ PHP</label>
+        <br>
+        <label for="">Tạo thanh trượt giá trị. Phạm vi mặc định từ 0 đến 100. Step mặc định là 1</label>
+        <br>
+        <input name="volume" type="range">                                            <!-- <input type="range">: Tạo thanh trượt giá trị. Phạm vi mặc định từ 0 đến 100. Step mặc định là 1 -->
+        <br>
+        <label for="mau_sac">Dùng để chọn màu sắc</label>
+        <br>
+        <input name="color" id="mau_sac" type="color">                                <!-- <input type="color">: Dùng để chọn màu sắc -->
+        <hr>
+
+        <!-- Các thuộc tính của thẻ input -->
+        
+        <input type="text" name="ho_ten" value="Nguyễn Quang Thỏa">                                        <!-- value: Thuộc tính value chỉ định giá trị ban đầu cho trường đầu vào -->
+        <br>
+        <input type="text" name="cccd" value="0123456789" readonly>                                        <!-- readonly: Xác định rằng trường đầu vào là chỉ đọc, giá trị sẽ đc gửi khi gửi biểu mẫu -->
+        <br>
+        <input type="text" name="email" value="thoa@gmail.com" disabled>                                   <!-- disable: Chỉ định rằng một trường đầu vào sẽ bị vô hiệu hóa, giá trị ko đc gửi khi gửi biểu mẫu -->
+        <br>
+        <input type="text" name="ho_ten" value="Họ tên" maxlength="10">                                    <!-- maxlength: Chỉ định số lượng ký tự tối đa dduwc phép trong 1 trường đầu vào -->
+        <br>
+        <input type="number" name="so_lương" min="1" max="5">                                              <!-- min/max: Chỉ định các giá trị tối thiểu và tối đa cho 1 trường đầu vào -->
+        <br>
+        <input type="text" name="ho_ten" value="" maxlength="10" placeholder="Nhập họ tên">                <!-- placehoder: Chỉ định 1 gợi ý để mô tả giá trị dự kiến của trường đầu vào -->
+        <br>
+        <input type="text" name="ho_ten" value="" maxlength="10" placeholder="Nhập họ tên" required>       <!-- repuired: Xác định rằng trường đầu vào phải đc điền trước khi gửi biểu mẫu -->
+
+    </form>
+</body>
+</html>
